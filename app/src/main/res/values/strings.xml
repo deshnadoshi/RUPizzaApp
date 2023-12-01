@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RUPizzaApp</string>
+    <string name="specialty_pizzas">Specialty Pizzas</string>
+    <string name="current_order">Current Order</string>
+    <string name="store_orders">Store Orders</string>
+    <string name="build_your_own">Build Your Own</string>
 </resources>

@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/specialtyMain"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="148dp"
         android:layout_height="152dp"
@@ -19,7 +19,7 @@
         android:drawablePadding="8dp"
         android:scaleType="fitCenter"
         android:src="@mipmap/buildyourownicon"
-        android:text="Specialty Pizzas"
+        android:text="@string/specialty_pizzas"
         android:textColorHighlight="#DC5B5B"
         android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/coMain"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="148dp"
         android:layout_height="152dp"
@@ -40,7 +40,7 @@
         android:drawablePadding="8dp"
         android:scaleType="fitCenter"
         android:src="@mipmap/buildyourownicon"
-        android:text="Current Order"
+        android:text="@string/current_order"
         android:textColorHighlight="#DC5B5B"
         android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/soMain"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="148dp"
         android:layout_height="152dp"
@@ -57,11 +57,11 @@
         android:layout_marginTop="406dp"
         android:layout_marginEnd="43dp"
         android:layout_marginBottom="173dp"
-        android:background="@color/black"
+        android:background="#8B0000"
         android:drawablePadding="8dp"
         android:scaleType="fitCenter"
         android:src="@mipmap/buildyourownicon"
-        android:text="Store Orders"
+        android:text="@string/store_orders"
         android:textColorHighlight="#DC5B5B"
         android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +85,7 @@
         app:layout_constraintVertical_bias="0.071" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/byoMain"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="148dp"
         android:layout_height="152dp"
@@ -97,7 +97,7 @@
         android:drawablePadding="8dp"
         android:scaleType="fitCenter"
         android:src="@mipmap/buildyourownicon"
-        android:text="Build Your Own"
+        android:text="@string/build_your_own"
         android:textColorHighlight="#DC5B5B"
         android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
