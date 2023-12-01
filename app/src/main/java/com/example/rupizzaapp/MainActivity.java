@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button byoMain;
     private Button coMain;
+    private Button soMain;
+    private Button specialtyMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         openBYO(savedInstanceState);
         openCurrentOrder(savedInstanceState);
+        openStoreOrders(savedInstanceState);
+        openSpecialtyPizzas(savedInstanceState);
 
     }
 
@@ -40,6 +44,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CurrentOrderActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    protected void openStoreOrders(Bundle savedInstanceState){
+        soMain = findViewById(R.id.soMain);
+
+        soMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StoreOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    protected void openSpecialtyPizzas(Bundle savedInstanceState){
+        specialtyMain = findViewById(R.id.specialtyMain);
+
+        specialtyMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SpecialtyPizzasActivity.class);
                 startActivity(intent);
             }
         });

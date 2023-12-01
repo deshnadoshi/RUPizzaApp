@@ -29,6 +29,14 @@
             android:name=".CurrentOrderActivity">
 
         </activity>
+        <activity
+            android:name=".StoreOrdersActivity">
+
+        </activity>
+        <activity
+            android:name=".SpecialtyPizzasActivity">
+
+        </activity>
     </application>
 
 </manifest>
