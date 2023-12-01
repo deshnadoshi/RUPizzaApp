@@ -101,4 +101,12 @@
             android:text="large" />
     </RadioGroup>
 
+    <Button
+        android:id="@+id/byoRetHome"
+        android:layout_width="96dp"
+        android:layout_height="39dp"
+        android:text="HOME"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="6dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
