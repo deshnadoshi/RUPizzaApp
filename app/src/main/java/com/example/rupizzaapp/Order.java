@@ -1,6 +1,6 @@
 package com.example.rupizzaapp;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+// import javafx.collections.FXCollections;
+// import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 
@@ -91,6 +91,7 @@ public class Order {
      * Creates an ObservableList with all of the pizzas in an order.
      * @return an ObservableList of <String> with pizza information.
      */
+    /**
     public ObservableList<String> toStringArray() {
         ObservableList<String> stringList = FXCollections.observableArrayList();
         for (int i = 0; i < this.all_orders.size(); i++) {
@@ -98,6 +99,7 @@ public class Order {
         }
         return stringList;
     }
+     */
 
     /**
      * Prints all of the orders.
