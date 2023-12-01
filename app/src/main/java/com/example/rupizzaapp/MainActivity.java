@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button byoMain;
+    private Button coMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         openBYO(savedInstanceState);
+        openCurrentOrder(savedInstanceState);
 
     }
 
@@ -30,6 +32,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    protected void openCurrentOrder(Bundle savedInstanceState){
+        coMain = findViewById(R.id.coMain);
+        coMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CurrentOrderActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

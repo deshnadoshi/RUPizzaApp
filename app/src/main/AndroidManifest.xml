@@ -25,6 +25,10 @@
             android:name=".BuildYourOwnActivity">
 
         </activity>
+        <activity
+            android:name=".CurrentOrderActivity">
+
+        </activity>
     </application>
 
 </manifest>
