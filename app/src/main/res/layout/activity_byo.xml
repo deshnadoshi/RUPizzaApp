@@ -21,32 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.071" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/byoAddTopping"
-        android:layout_width="125dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="131dp"
-        android:layout_marginEnd="252dp"
-        android:layout_marginBottom="400dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/byoRemoveTopping"
-        android:layout_width="126dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="229dp"
-        android:layout_marginTop="131dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="400dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/byoAddPizzaTopping"
         android:layout_width="wrap_content"
@@ -157,6 +131,32 @@
         android:layout_marginEnd="135dp"
         android:layout_marginBottom="56dp"
         android:text="Add to Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/byoAddTopping"
+        android:layout_width="147dp"
+        android:layout_height="207dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginBottom="413dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/byoRemoveTopping"
+        android:layout_width="156dp"
+        android:layout_height="207dp"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="413dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
