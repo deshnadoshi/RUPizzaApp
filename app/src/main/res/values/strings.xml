@@ -5,4 +5,5 @@
     <string name="store_orders">Store Orders</string>
     <string name="build_your_own">Build Your Own</string>
     <string name="ru_pizza_app">RU Pizza App</string>
+    <string name="initial_price">Initial Price</string>
 </resources>
