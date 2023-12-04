@@ -2,7 +2,9 @@ package com.example.rupizzaapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -46,6 +48,17 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, all_toppings);
         byoAddTopping.setAdapter(adapter);
 
+
+    }
+
+    private void addOnTopping(){
+        byoAddTopping.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // position tells you which item was clicked
+
+            }
+        });
 
     }
 
