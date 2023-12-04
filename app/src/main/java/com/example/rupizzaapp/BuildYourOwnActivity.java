@@ -45,9 +45,9 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         byoPrice.setText(R.string.initial_price);
         byoAddTopping = findViewById(R.id.byoAddTopping);
         byoRemoveTopping = findViewById(R.id.byoRemoveTopping);
-        ArrayList <String> all_toppings = new ArrayList<>();
+        all_toppings = new ArrayList<>();
         all_toppings = populateToppings(all_toppings);
-        on_pizza_toppings = null;
+        on_pizza_toppings = new ArrayList<>();
 
         byoAddTopping = findViewById(R.id.byoAddTopping);
         adapterAdd = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, all_toppings);
@@ -57,6 +57,8 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         adapterRemove = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, on_pizza_toppings);
         byoRemoveTopping.setAdapter(adapterRemove);
 
+        addOnTopping();
+        removePizzaTopping();
     }
 
     private void addOnTopping(){
@@ -75,10 +77,27 @@ public class BuildYourOwnActivity extends AppCompatActivity {
                 // need to check if position actually corresponds to the actual index or if it's 1 + the index
                 // if so, need to subtract 1 from the index
 
-
             }
         });
 
+    }
+
+    private void removePizzaTopping(){
+        byoRemoveTopping.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                showToast(on_pizza_toppings.get(position) + " topping removed.");
+
+                String selectedTopping = on_pizza_toppings.get(position);
+                all_toppings.add(selectedTopping);
+                adapterRemove.notifyDataSetChanged();
+
+                on_pizza_toppings.remove(position);
+                adapterAdd.notifyDataSetChanged(); // notifies the adapter that the list has changed
+
+
+            }
+        });
     }
 
     /**
