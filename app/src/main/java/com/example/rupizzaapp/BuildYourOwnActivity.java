@@ -31,7 +31,9 @@ public class BuildYourOwnActivity extends AppCompatActivity {
     private Button byoAddToOrder;
     private TextView byoPrice;
     private ArrayList<String> all_toppings;
-    private ArrayAdapter adapter;
+    private ArrayList <String> on_pizza_toppings;
+    private ArrayAdapter adapterAdd;
+    private ArrayAdapter adapterRemove;
 
 
     @Override
@@ -45,10 +47,15 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         byoRemoveTopping = findViewById(R.id.byoRemoveTopping);
         ArrayList <String> all_toppings = new ArrayList<>();
         all_toppings = populateToppings(all_toppings);
+        on_pizza_toppings = null;
 
         byoAddTopping = findViewById(R.id.byoAddTopping);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, all_toppings);
-        byoAddTopping.setAdapter(adapter);
+        adapterAdd = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, all_toppings);
+        byoAddTopping.setAdapter(adapterAdd);
+
+        byoRemoveTopping = findViewById(R.id.byoRemoveTopping);
+        adapterRemove = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, on_pizza_toppings);
+        byoRemoveTopping.setAdapter(adapterRemove);
 
     }
 
@@ -57,8 +64,17 @@ public class BuildYourOwnActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 showToast(all_toppings.get(position) + " topping added!");
+
+                String selectedTopping = all_toppings.get(position);
+                on_pizza_toppings.add(selectedTopping);
+                adapterRemove.notifyDataSetChanged();
+
                 all_toppings.remove(position);
-                adapter.notifyDataSetChanged(); // notifies the adapter that the list has changed
+                adapterAdd.notifyDataSetChanged(); // notifies the adapter that the list has changed
+
+                // need to check if position actually corresponds to the actual index or if it's 1 + the index
+                // if so, need to subtract 1 from the index
+
 
             }
         });
