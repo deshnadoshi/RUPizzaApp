@@ -193,6 +193,10 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         byoSize.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton selectedRadioButton = findViewById(checkedId);
+                if (selectedRadioButton == null){
+
+                }
                 calculatePrice();
             }
         });
