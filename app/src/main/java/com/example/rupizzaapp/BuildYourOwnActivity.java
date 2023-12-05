@@ -155,6 +155,9 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Calculates the price of the pizza.
+     */
     @SuppressLint("DefaultLocale")
     private void calculatePrice(){
         double pizzaPrice = 0.0;
@@ -241,6 +244,9 @@ public class BuildYourOwnActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Adds a pizza to the customer's order.
+     */
     private void addToOrder(){
         byoAddToOrder = findViewById(R.id.byoAddToOrder); // Replace with your Button ID
 
@@ -304,6 +310,9 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         return null;
     }
 
+    /**
+     * Sets the toppings of the pizza.
+     */
     private void setSelectedToppings(){
         ArrayList <Topping> pizza_toppings = new ArrayList<>();
         if (on_pizza_toppings != null && !on_pizza_toppings.isEmpty()){
