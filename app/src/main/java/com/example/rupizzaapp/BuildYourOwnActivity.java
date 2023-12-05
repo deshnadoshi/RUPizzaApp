@@ -73,6 +73,11 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         adapterRemove = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, on_pizza_toppings);
         byoRemoveTopping.setAdapter(adapterRemove);
 
+        if (selectedSize() == null || selectedSauce() == null){
+            byoAddToOrder = findViewById(R.id.byoAddToOrder);
+            byoAddToOrder.setEnabled(false);
+        }
+
         addOnTopping();
         removePizzaTopping();
         updatePriceOnClick();
@@ -98,14 +103,15 @@ public class BuildYourOwnActivity extends AppCompatActivity {
                 if (on_pizza_toppings.size() < 3){
                     byoAddToOrder = findViewById(R.id.byoAddToOrder);
                     byoAddToOrder.setEnabled(false);
-                } else {
-                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
-                    byoAddToOrder.setEnabled(true);
                 }
 
                 if (on_pizza_toppings.size() > 7){
                     buildAlert("Cannot choose more than 7 toppings. Please remove any excess toppings.");
                     byoAddToOrder.setEnabled(false);
+                }
+                if (selectedSauce() != null && selectedSize() != null && on_pizza_toppings.size() >= 3 && on_pizza_toppings.size() <= 7){
+                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
+                    byoAddToOrder.setEnabled(true);
                 }
 
             }
@@ -132,13 +138,14 @@ public class BuildYourOwnActivity extends AppCompatActivity {
                 if (on_pizza_toppings.size() < 3){
                     byoAddToOrder = findViewById(R.id.byoAddToOrder);
                     byoAddToOrder.setEnabled(false);
-                } else {
-                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
-                    byoAddToOrder.setEnabled(true);
                 }
                 if (on_pizza_toppings.size() > 7){
                     buildAlert("Cannot choose more than 7 toppings. Please remove any excess toppings.");
                     byoAddToOrder.setEnabled(false);
+                }
+                if (selectedSauce() != null && selectedSize() != null && on_pizza_toppings.size() >= 3 && on_pizza_toppings.size() <= 7){
+                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
+                    byoAddToOrder.setEnabled(true);
                 }
 
             }
@@ -193,9 +200,9 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         byoSize.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                RadioButton selectedRadioButton = findViewById(checkedId);
-                if (selectedRadioButton == null){
-
+                if (selectedSauce() != null && selectedSize() != null && on_pizza_toppings.size() >= 3 && on_pizza_toppings.size() <= 7){
+                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
+                    byoAddToOrder.setEnabled(true);
                 }
                 calculatePrice();
             }
@@ -204,6 +211,10 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         byoSauce.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (selectedSauce() != null && selectedSize() != null && on_pizza_toppings.size() >= 3 && on_pizza_toppings.size() <= 7){
+                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
+                    byoAddToOrder.setEnabled(true);
+                }
                 calculatePrice();
             }
         });
