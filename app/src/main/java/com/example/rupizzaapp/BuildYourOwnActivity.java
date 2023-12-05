@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -30,6 +31,8 @@ public class BuildYourOwnActivity extends AppCompatActivity {
     private RadioGroup byoSauce;
     private Button byoAddToOrder;
     private TextView byoPrice;
+    private CheckBox byoExtraSauce;
+    private CheckBox byoExtraCheese;
     private ArrayList<String> all_toppings;
     private ArrayList <String> on_pizza_toppings;
     private ArrayAdapter adapterAdd;
@@ -61,11 +64,14 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         removePizzaTopping();
     }
 
+    /**
+     * Handles adding a topping to the pizza.
+     */
     private void addOnTopping(){
         byoAddTopping.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                showToast(all_toppings.get(position) + " topping added!");
+                showToast(all_toppings.get(position) + " topping: Updated.");
 
                 String selectedTopping = all_toppings.get(position);
                 on_pizza_toppings.add(selectedTopping);
@@ -73,20 +79,31 @@ public class BuildYourOwnActivity extends AppCompatActivity {
 
                 all_toppings.remove(position);
                 adapterAdd.notifyDataSetChanged(); // notifies the adapter that the list has changed
+                if (on_pizza_toppings.size() < 3){
+                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
+                    byoAddToOrder.setEnabled(false);
+                } else {
+                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
+                    byoAddToOrder.setEnabled(true);
+                }
 
-                // need to check if position actually corresponds to the actual index or if it's 1 + the index
-                // if so, need to subtract 1 from the index
-
+                if (on_pizza_toppings.size() > 7){
+                    buildAlert("Cannot choose more than 7 toppings. Please remove any excess toppings.");
+                    byoAddToOrder.setEnabled(false);
+                }
             }
         });
 
     }
 
+    /**
+     * Handles removing a topping from the pizza.
+     */
     private void removePizzaTopping(){
         byoRemoveTopping.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                showToast(on_pizza_toppings.get(position) + " topping removed.");
+                showToast(on_pizza_toppings.get(position) + " topping: Updated.");
 
                 String selectedTopping = on_pizza_toppings.get(position);
                 all_toppings.add(selectedTopping);
@@ -94,7 +111,17 @@ public class BuildYourOwnActivity extends AppCompatActivity {
 
                 on_pizza_toppings.remove(position);
                 adapterAdd.notifyDataSetChanged(); // notifies the adapter that the list has changed
-
+                if (on_pizza_toppings.size() < 3){
+                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
+                    byoAddToOrder.setEnabled(false);
+                } else {
+                    byoAddToOrder = findViewById(R.id.byoAddToOrder);
+                    byoAddToOrder.setEnabled(true);
+                }
+                if (on_pizza_toppings.size() > 7){
+                    buildAlert("Cannot choose more than 7 toppings. Please remove any excess toppings.");
+                    byoAddToOrder.setEnabled(false);
+                }
 
             }
         });
@@ -123,10 +150,13 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         return toppings;
     }
 
-    private void buildAlert(AlertDialog.Builder alert) {
+    private void buildAlert(String message) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this); // Use 'this' as the context
         alert.setCancelable(true);
+        alert.setMessage(message);
         alert.setPositiveButton( "Okay", (dialog, id) -> dialog.cancel());
         alert.setNegativeButton("Cancel", (dialog, id) -> dialog.cancel());
+        alert.show();
     }
 
     private void showToast(String message) {
