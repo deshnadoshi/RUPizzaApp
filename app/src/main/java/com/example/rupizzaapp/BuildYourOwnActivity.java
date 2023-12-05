@@ -176,16 +176,16 @@ public class BuildYourOwnActivity extends AppCompatActivity {
                 pizzaPrice += 1.49;
             }
         }
-        if (byoExtraCheese.isSelected() && new_order != null){
+        if (byoExtraCheese.isChecked() && new_order != null){
             new_order.setExtraCheese(true);
             pizzaPrice += 1;
-        } else if (!byoExtraCheese.isSelected() && new_order != null){
+        } else if (!byoExtraCheese.isChecked() && new_order != null){
             new_order.setExtraCheese(false);
         }
-        if (byoExtraSauce.isSelected() && new_order != null){
+        if (byoExtraSauce.isChecked() && new_order != null){
             new_order.setExtraSauce(true);
             pizzaPrice += 1;
-        } else if (!byoExtraSauce.isSelected() && new_order != null){
+        } else if (!byoExtraSauce.isChecked() && new_order != null){
             new_order.setExtraSauce(false);
         }
         if (new_order != null){
@@ -195,6 +195,9 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         byoPrice.setText(String.format("%.2f", pizzaPrice));
     }
 
+    /**
+     * Updates the price of the pizza in real time.
+     */
     private void updatePriceOnClick(){
         RadioGroup byoSize = findViewById(R.id.byoSize);
         byoSize.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
