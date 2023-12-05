@@ -44,6 +44,8 @@ public class BuildYourOwnActivity extends AppCompatActivity {
     private ArrayAdapter adapterAdd;
     private ArrayAdapter adapterRemove;
     private Pizza new_order = null;
+    private Order current_order = null;
+    private ArrayList <Pizza> my_pizzas = new ArrayList<>();
 
 
     /**
@@ -81,6 +83,7 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         addOnTopping();
         removePizzaTopping();
         updatePriceOnClick();
+        addToOrder();
 
     }
 
@@ -238,6 +241,27 @@ public class BuildYourOwnActivity extends AppCompatActivity {
 
     }
 
+    private void addToOrder(){
+        byoAddToOrder = findViewById(R.id.byoAddToOrder); // Replace with your Button ID
+
+        // Set an OnClickListener for the button
+        byoAddToOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (new_order != null){
+                    setSelectedToppings();
+                    my_pizzas.add(new_order);
+                    current_order = Order.getInstance();
+                    current_order.addPizza(new_order);
+                    buildAlert("\n" + new_order.toString() + "\nThis pizza was added to your order!" + "\nHere is your complete order: "
+                    + current_order.allOrdersToString());
+                }
+            }
+        });
+    }
+
+
+
     /**
      * Determines the Size enum corresponding to the selected size on the Build Your Own screen.
      * @return Size of the pizza.
@@ -278,6 +302,25 @@ public class BuildYourOwnActivity extends AppCompatActivity {
             }
         }
         return null;
+    }
+
+    private void setSelectedToppings(){
+        ArrayList <Topping> pizza_toppings = new ArrayList<>();
+        if (on_pizza_toppings != null && !on_pizza_toppings.isEmpty()){
+            for (int i = 0; i < on_pizza_toppings.size(); i++){
+                String topping_name = on_pizza_toppings.get(i).toLowerCase();
+                for (Topping topping : Topping.values()){
+                    String topping_enum = topping.toString().toLowerCase();
+                    if(topping_name.equals(topping_enum)){
+                        pizza_toppings.add(topping);
+                    }
+                }
+            }
+        }
+        if (new_order != null){
+            new_order.setToppings(pizza_toppings);
+        }
+
     }
 
 
@@ -324,6 +367,7 @@ public class BuildYourOwnActivity extends AppCompatActivity {
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
+
 
 
 
