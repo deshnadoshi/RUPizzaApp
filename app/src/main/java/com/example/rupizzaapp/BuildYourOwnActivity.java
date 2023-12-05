@@ -365,7 +365,7 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         alert.setCancelable(true);
         alert.setMessage(message);
         alert.setPositiveButton( "Okay", (dialog, id) -> dialog.cancel());
-        alert.setNegativeButton("Cancel", (dialog, id) -> dialog.cancel());
+        alert.setNegativeButton("Close", (dialog, id) -> dialog.cancel());
         alert.show();
     }
 
