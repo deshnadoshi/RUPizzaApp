@@ -10,11 +10,10 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button byoMain;
-    private Button coMain;
-    private Button soMain;
-    private Button specialtyMain;
     private ImageView byomain;
+    private ImageView coMain;
+    private ImageView specialtyMain;
+    private ImageView soMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

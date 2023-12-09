@@ -6,69 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/specialtyMain"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="148dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="210dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="369dp"
-        android:background="#8B0000"
-        android:drawablePadding="8dp"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/buildyourownicon"
-        android:text="@string/specialty_pizzas"
-        android:textColorHighlight="#DC5B5B"
-        android:textColorLink="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/coMain"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="148dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="406dp"
-        android:layout_marginEnd="229dp"
-        android:layout_marginBottom="173dp"
-        android:background="#8B0000"
-        android:drawablePadding="8dp"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/buildyourownicon"
-        android:text="@string/current_order"
-        android:textColorHighlight="#DC5B5B"
-        android:textColorLink="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/soMain"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="148dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="406dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="173dp"
-        android:background="#8B0000"
-        android:drawablePadding="8dp"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/buildyourownicon"
-        android:text="@string/store_orders"
-        android:textColorHighlight="#DC5B5B"
-        android:textColorLink="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,5 +33,50 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.364"
         app:srcCompat="@mipmap/buildyourownicon" />
+
+    <ImageView
+        android:id="@+id/coMain"
+        android:layout_width="148dp"
+        android:layout_height="152dp"
+        android:contentDescription="@string/current_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.700"
+        app:srcCompat="@mipmap/currentordericon"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <ImageView
+        android:id="@+id/specialtyMain"
+        android:layout_width="148dp"
+        android:layout_height="152dp"
+        android:contentDescription="@string/specialty_pizzas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364"
+        app:srcCompat="@mipmap/specialtyicon"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="222dp" />
+
+    <ImageView
+        android:id="@+id/soMain"
+        android:layout_width="148dp"
+        android:layout_height="152dp"
+        android:contentDescription="@string/store_orders"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.700"
+        app:srcCompat="@mipmap/storeordersicon"
+        tools:layout_editor_absoluteX="232dp"
+        tools:layout_editor_absoluteY="418dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
