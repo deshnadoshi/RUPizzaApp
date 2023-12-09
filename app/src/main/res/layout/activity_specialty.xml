@@ -23,12 +23,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/specialtyPizzaType"
-        android:layout_width="355dp"
-        android:layout_height="215dp"
+        android:layout_width="183dp"
+        android:layout_height="216dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="101dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="415dp"
+        android:layout_marginEnd="201dp"
+        android:layout_marginBottom="414dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -187,5 +187,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/specialtyImage"
+        android:layout_width="158dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="457dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/specialtyicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

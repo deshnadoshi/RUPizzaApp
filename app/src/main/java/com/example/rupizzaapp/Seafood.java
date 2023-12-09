@@ -118,5 +118,14 @@ public class Seafood extends Pizza {
     public void setPrice (double amount){
 
     }
+
+    /**
+     * Prints the toppings on a Seafood pizza.
+     * @return Toppings on a Seafood pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "Shrimp, Squid, CrabMeats";
+    }
 }
 

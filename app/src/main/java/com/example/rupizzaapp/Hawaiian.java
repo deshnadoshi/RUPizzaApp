@@ -121,4 +121,13 @@ public class Hawaiian extends Pizza {
 
     }
 
+    /**
+     * Prints the toppings on a Hawaiian pizza.
+     * @return Toppings on a Hawaiian pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "Pineapple, BlackOlives, Ham, Pepperoni";
+    }
+
 }

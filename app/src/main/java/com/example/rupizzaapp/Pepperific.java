@@ -121,4 +121,13 @@ public class Pepperific extends Pizza {
 
     }
 
+    /**
+     * Prints the toppings on a Pepperific pizza.
+     * @return Toppings on a Pepperific pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "GreenPepper, Pepperoni, Sausage, Mushroom";
+    }
+
 }

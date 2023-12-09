@@ -120,4 +120,13 @@ public class Supreme extends Pizza {
     public void setPrice (double amount){
 
     }
+
+    /**
+     * Prints the toppings on a Supreme pizza.
+     * @return Toppings on a Supreme pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "Sausage, Pepperoni, Ham, GreenPepper, Onion, BlackOlives, Mushroom";
+    }
 }
