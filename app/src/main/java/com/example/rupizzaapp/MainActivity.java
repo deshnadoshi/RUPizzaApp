@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button coMain;
     private Button soMain;
     private Button specialtyMain;
+    private ImageView byomain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void openBYO(Bundle savedInstanceState){
-        byoMain = findViewById(R.id.byoMain);
-        byoMain.setOnClickListener(new View.OnClickListener() {
+        byomain = findViewById(R.id.byomain);
+        byomain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BuildYourOwnActivity.class);

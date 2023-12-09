@@ -84,25 +84,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.071" />
 
-    <Button
-        android:id="@+id/byoMain"
-        style="@style/Widget.AppCompat.Button"
+    <ImageView
+        android:id="@+id/byomain"
         android:layout_width="148dp"
         android:layout_height="152dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="210dp"
-        android:layout_marginEnd="229dp"
-        android:layout_marginBottom="369dp"
-        android:background="#8B0000"
-        android:drawablePadding="8dp"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/buildyourownicon"
-        android:text="@string/build_your_own"
-        android:textColorHighlight="#DC5B5B"
-        android:textColorLink="#000000"
+        android:contentDescription="@string/build_your_own_pizza"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364"
+        app:srcCompat="@mipmap/buildyourownicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
