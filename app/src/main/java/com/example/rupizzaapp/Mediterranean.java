@@ -121,4 +121,13 @@ public class Mediterranean extends Pizza {
 
     }
 
+    /**
+     * Prints the toppings on a Mediterranean pizza.
+     * @return Toppings on a Mediterranean pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "BlackOlives, Onion, Mushroom, Chicken";
+    }
+
 }

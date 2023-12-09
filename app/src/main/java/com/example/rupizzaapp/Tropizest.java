@@ -121,4 +121,13 @@ public class Tropizest extends Pizza {
 
     }
 
+
+    /**
+     * Prints the toppings on a Tropizest pizza.
+     * @return Toppings on a Tropizest pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "Pineapple, BlackOlives, Ham, Pepperoni";
+    }
 }

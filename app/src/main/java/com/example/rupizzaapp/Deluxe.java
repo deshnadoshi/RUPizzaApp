@@ -121,4 +121,15 @@ public class Deluxe extends Pizza {
 
     }
 
+    /**
+     * Prints the toppings on a Deluxe pizza.
+     * @return Toppings on a Deluxe pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "Sausage, Pepperoni, GreenPepper, Onion, Mushroom";
+    }
+
+
+
 }
