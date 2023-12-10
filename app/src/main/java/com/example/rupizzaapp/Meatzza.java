@@ -119,4 +119,13 @@ public class Meatzza extends Pizza {
     public void setPrice (double amount){
 
     }
+
+    /**
+     * Prints the toppings on a Meatzza pizza.
+     * @return Toppings on a Meatzza pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "Sausage, Pepperoni, Beef, Ham";
+    }
 }

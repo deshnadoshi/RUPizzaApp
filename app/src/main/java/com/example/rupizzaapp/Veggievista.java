@@ -121,4 +121,13 @@ public class Veggievista extends Pizza {
 
     }
 
+    /**
+     * Prints the toppings on a Veggievista pizza.
+     * @return Toppings on a Veggievista pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "GreenPepper, Onion, BlackOlives, Mushroom";
+    }
+
 }

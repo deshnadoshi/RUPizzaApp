@@ -89,5 +89,10 @@ public abstract class Pizza {
     @Override
     public abstract String toString();
 
+    /**
+     * Prints the toppings on a specialty pizza.
+     * @return Toppings on a specialty pizza.
+     */
+    public abstract String specialtyPrintTopping();
 
 }

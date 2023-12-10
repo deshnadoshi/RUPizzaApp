@@ -118,4 +118,13 @@ public class Pepperoni extends Pizza {
     public void setPrice (double amount){
 
     }
+
+    /**
+     * Prints the toppings on a Pepperoni pizza.
+     * @return Toppings on a Pepperoni pizza.
+     */
+    @Override
+    public String specialtyPrintTopping (){
+        return "Pepperoni";
+    }
 }
