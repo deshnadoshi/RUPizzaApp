@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SpecialtyPizzasActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,66 +23,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/specialtyPizzaType"
-        android:layout_width="183dp"
-        android:layout_height="216dp"
+        android:layout_width="359dp"
+        android:layout_height="219dp"
         android:layout_marginStart="27dp"
-        android:layout_marginTop="101dp"
-        android:layout_marginEnd="201dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="414dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/specialtySauce"
-        android:layout_width="143dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="353dp"
-        android:layout_marginEnd="241dp"
-        android:layout_marginBottom="355dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/specialtySauceLabel"
-        android:layout_width="47dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="333dp"
-        android:layout_marginEnd="337dp"
-        android:layout_marginBottom="380dp"
-        android:text="sauce:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/specialtyToppingLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="396dp"
-        android:layout_marginEnd="325dp"
-        android:layout_marginBottom="316dp"
-        android:text="toppings:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/specialtyTopping"
-        android:layout_width="166dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="418dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="186dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,14 +84,15 @@
         android:id="@+id/specialtyExtraSauce"
         android:layout_width="118dp"
         android:layout_height="45dp"
-        android:layout_marginTop="545dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="533dp"
         android:layout_marginEnd="79dp"
-        android:layout_marginBottom="141dp"
+        android:layout_marginBottom="153dp"
         android:text="extra sauce"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/specialtyAdd"
@@ -190,16 +137,16 @@
 
     <ImageView
         android:id="@+id/specialtyImage"
-        android:layout_width="158dp"
-        android:layout_height="148dp"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="126dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="457dp"
+        android:layout_width="159dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="353dp"
+        android:layout_marginEnd="226dp"
+        android:layout_marginBottom="229dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/specialtyicon" />
+        android:src="@drawable/deluxe" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

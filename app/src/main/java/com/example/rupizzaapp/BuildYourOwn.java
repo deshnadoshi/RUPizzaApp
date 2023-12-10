@@ -141,5 +141,8 @@ public class BuildYourOwn extends Pizza {
                 sauce.toString().toLowerCase() + ", " + extrasToString() + " $" + pizza_price;
     }
 
-
+    @Override
+    public String specialtyPrintTopping() {
+        return null;
+    }
 }
