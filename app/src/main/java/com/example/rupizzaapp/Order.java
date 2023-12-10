@@ -86,7 +86,13 @@ public class Order {
         orderObject = null;
     }
 
-
+    public ArrayList<String> toStringArray() {
+        ArrayList<String> stringList = new ArrayList<>();
+        for (int i = 0; i < this.all_orders.size(); i++) {
+            stringList.add(String.valueOf(this.all_orders.get(i)));
+        }
+        return stringList;
+    }
     /**
      * Creates an ObservableList with all of the pizzas in an order.
      * @return an ObservableList of <String> with pizza information.

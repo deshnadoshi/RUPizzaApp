@@ -7,4 +7,9 @@
     <string name="ru_pizza_app">RU Pizza App</string>
     <string name="initial_price">$0.00</string>
     <string name="build_your_own_pizza">Build your own pizza!</string>
+    <string name="subtotal">Subtotal:</string>
+    <string name="tax">Tax:</string>
+    <string name="total">Total:</string>
+    <string name="place_order">Place Order</string>
+    <string name="delete_order">Delete Order</string>
 </resources>
