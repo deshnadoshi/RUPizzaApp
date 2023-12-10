@@ -51,19 +51,19 @@
             android:id="@+id/specialtySmall"
             android:layout_width="107dp"
             android:layout_height="match_parent"
-            android:text="small" />
+            android:text="@string/small" />
 
         <RadioButton
             android:id="@+id/specialtyMed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="medium" />
+            android:text="@string/medium" />
 
         <RadioButton
             android:id="@+id/specialtyLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="large" />
+            android:text="@string/large" />
     </RadioGroup>
 
     <CheckBox
@@ -74,7 +74,7 @@
         android:layout_marginTop="485dp"
         android:layout_marginEnd="82dp"
         android:layout_marginBottom="198dp"
-        android:text="extra cheese"
+        android:text="@string/extra_cheese"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +88,7 @@
         android:layout_marginTop="533dp"
         android:layout_marginEnd="79dp"
         android:layout_marginBottom="153dp"
-        android:text="extra sauce"
+        android:text="@string/extra_sauce"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +102,7 @@
         android:layout_marginTop="667dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="16dp"
-        android:text="Add to Order"
+        android:text="@string/add_to_order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +129,7 @@
         android:layout_marginTop="572dp"
         android:layout_marginEnd="349dp"
         android:layout_marginBottom="140dp"
-        android:text="price:"
+        android:text="@string/price"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
