@@ -23,6 +23,16 @@ public class PizzaMaker {
             pizza = new Seafood(Size.SMALL, null, false, false);
         } else if (pizzaType.equals("Supreme")) {
             pizza = new Supreme(Size.SMALL, null, false, false);
+        } else if (pizzaType.equals("Hawaiian")){
+            pizza = new Hawaiian(Size.SMALL, null, false, false);
+        } else if (pizzaType.equals("Mediterranean")){
+            pizza = new Mediterranean(Size.SMALL, null, false, false);
+        } else if (pizzaType.equals("Pepperific")){
+            pizza = new Pepperific(Size.SMALL, null, false, false);
+        } else if (pizzaType.equals("Tropizest")){
+            pizza = new Tropizest(Size.SMALL, null, false, false);
+        } else if (pizzaType.equals("Veggievista")){
+            pizza = new Veggievista(Size.SMALL, null, false, false);
         } else if (pizzaType.equals("BuildYourOwn")) {
             pizza = new BuildYourOwn(Size.SMALL, null, false, false, null);
         } else {
