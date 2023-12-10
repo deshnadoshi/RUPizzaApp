@@ -248,9 +248,8 @@ public class BuildYourOwnActivity extends AppCompatActivity {
      * Adds a pizza to the customer's order.
      */
     private void addToOrder(){
-        byoAddToOrder = findViewById(R.id.byoAddToOrder); // Replace with your Button ID
+        byoAddToOrder = findViewById(R.id.byoAddToOrder);
 
-        // Set an OnClickListener for the button
         byoAddToOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
