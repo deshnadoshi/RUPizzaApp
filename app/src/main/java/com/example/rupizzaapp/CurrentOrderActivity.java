@@ -28,12 +28,9 @@ public class CurrentOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currentorder);
-
         pizzas = findViewById(R.id.pizzas);
-
         Order currentOrder = Order.getInstance();
         ArrayList<String> allPizzas = currentOrder.toStringArray();
-
         ArrayAdapter<String> pizzaAdaptor = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, allPizzas);
         pizzas.setAdapter(pizzaAdaptor);
         updatePrices();

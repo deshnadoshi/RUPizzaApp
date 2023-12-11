@@ -15,6 +15,7 @@
     <string name="delete_instructions">If you want to delete an order, please click on it in the above list.</string>
     <string name="add_to_order">Add to Order</string>
     <string name="order_number">Order Number:</string>
+    <string name="order_total">Order Total:</string>
     <string name="small">Small</string>
     <string name="medium">Medium</string>
     <string name="large">Large</string>
