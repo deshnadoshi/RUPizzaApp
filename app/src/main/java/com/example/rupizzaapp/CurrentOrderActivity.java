@@ -16,6 +16,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
+/**
+ * Creates and manages the Current Order Screen.
+ * @author Haejin Song, Deshna Doshi
+ */
 
 public class CurrentOrderActivity extends AppCompatActivity {
     private Button placeOrder;
@@ -24,6 +28,13 @@ public class CurrentOrderActivity extends AppCompatActivity {
     private TextView total;
     private TextView order_number;
     private ListView pizzas;
+
+    /**
+     * Initializes the view of the Current Order screen.
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +73,14 @@ public class CurrentOrderActivity extends AppCompatActivity {
         });
     }
 
-    // Method to show the alert dialog
+    /**
+     * Displays the AlertDialog.
+     * @param selectedItem The selected pizza in the order.
+     * @param allPizzas The list of all pizzas.
+     * @param pizzaAdaptor The adapter controlling the list.
+     * @param position The position of the pizza selected.
+     * @param currentOrder The current order object.
+     */
     private void showAlertDialog(String selectedItem, ArrayList<String> allPizzas, ArrayAdapter<String> pizzaAdaptor, int position, Order currentOrder) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Confirmation")
@@ -88,6 +106,9 @@ public class CurrentOrderActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
+    /**
+     * Updates the prices based on changes in the current order.
+     */
     private void updatePrices() {
         Order order = Order.getInstance();
         ArrayList<Pizza> pizzas = order.getAllOrders();
@@ -105,6 +126,10 @@ public class CurrentOrderActivity extends AppCompatActivity {
         total.setText("Total: " + String.format("%.2f", priceTotal));
     }
 
+    /**
+     * Builds and displays a Toast.
+     * @param message Message to be displayed on the toast.
+     */
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }

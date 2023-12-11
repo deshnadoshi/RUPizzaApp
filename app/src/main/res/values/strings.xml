@@ -27,4 +27,5 @@
     <string name="add_topping">Click to add a topping.</string>
     <string name="delete_topping">Click to delete a topping.</string>
     <string name="click_type">Click to select specialty pizza type.</string>
+    <string name="quantity">Quantity:</string>
 </resources>

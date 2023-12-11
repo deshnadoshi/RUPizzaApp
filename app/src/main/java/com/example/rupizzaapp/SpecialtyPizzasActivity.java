@@ -23,6 +23,10 @@ import com.example.rupizzaapp.MyAdapter.OnItemClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Handles and creates the Specialty Pizzas screen.
+ */
+
 public class SpecialtyPizzasActivity extends AppCompatActivity {
     private RecyclerView specialtyPizzaType;
     private TextView specialtySauce;
@@ -39,6 +43,12 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
     private ArrayList<Pizza> my_pizzas = new ArrayList<>();
     private Order current_order;
 
+    /**
+     * Initializes the screen for Specialty Pizzas.
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +94,10 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Populates the RecyclerView with all of the specialty pizzas.
+     * @return an ArrayList of all of the specialty pizzas.
+     */
     private ArrayList<Item> populateRecyclerView(){
         ArrayList<Item> allSpecialtyPizzas = new ArrayList<>();
         allSpecialtyPizzas.add(new Item("Deluxe", "$14.99; Tomato Sauce; Sausage, Pepperoni, GreenPepper, Onion, Mushroom"));
@@ -99,6 +113,10 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
         return allSpecialtyPizzas;
     }
 
+    /**
+     * Changes the image of the pizza based on the selection.
+     * @param pizzaName The type of specialty pizza.
+     */
     private void setPizzaImage(String pizzaName){
         if (pizzaName.equals("Deluxe")){
             chooseImage("deluxe");
@@ -125,6 +143,10 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Determines the image chosen to be displayed.
+     * @param imageName The name of the image (.jpg) file.
+     */
     private void chooseImage(String imageName) {
         pizzaImageName = findViewById(R.id.pizzaImageName);
         pizzaImageName.setText(imageName.toUpperCase());
@@ -170,6 +192,9 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
         specialtyPrice.setText("" + String.format("%.2f", pizzaPrice));
     }
 
+    /**
+     * Handles adding a pizza to the current order.
+     */
     private void addToOrder(){
         specialtyQty = findViewById(R.id.specialtyQty);
         int quantity = (int) specialtyQty.getSelectedItem();
@@ -218,17 +243,28 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Determines if extra cheese is selected.
+     * @return True if it is selected, false otherwise.
+     */
     private boolean selectedExtraCheese(){
         specialtyExtraCheese = findViewById(R.id.specialtyExtraCheese);
         return specialtyExtraCheese.isChecked();
     }
 
+    /**
+     * Determines if extra sauce is selected.
+     * @return True if it is selected, false otherwise.
+     */
     private boolean selectedExtraSauce(){
         specialtyExtraSauce = findViewById(R.id.specialtyExtraSauce);
         return specialtyExtraSauce.isChecked();
     }
 
+    /**
+     * Determines the size selected.
+     * @return Size of the pizza.
+     */
     private Size selectedSize(){
         specialtySize = findViewById(R.id.specialtySize);
         int selectedSizeId = specialtySize.getCheckedRadioButtonId();
@@ -261,7 +297,9 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
         alert.show();
     }
 
-
+    /**
+     * Initializes the instance variables of the app.
+     */
     private void setIDs(){
         specialtyImage = findViewById(R.id.specialtyImage);
         specialtySize = findViewById(R.id.specialtySize);
@@ -270,6 +308,9 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
         specialtyExtraSauce = findViewById(R.id.specialtyExtraSauce);
     }
 
+    /**
+     * Populates the spinner that controls the quantity of the pizzas.
+     */
     private void setSpinnerIDs(){
         List<Integer> pizzaQuantities = new ArrayList<>();
         for (int i = 1; i <= 10; i++) {
