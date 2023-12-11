@@ -55,6 +55,8 @@ public class CurrentOrderActivity extends AppCompatActivity {
                     updatePrices();
                     allPizzas.clear();
                     pizzaAdaptor.notifyDataSetChanged();
+                } else {
+                    showToast("You must add at least one pizza to your order.");
                 }
             }
         });
