@@ -3,7 +3,6 @@ package com.example.rupizzaapp;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -71,12 +70,14 @@ public class StoreOrdersActivity extends AppCompatActivity implements OnItemSele
                         storeOrder.deleteOrder(position);
                         allPizzas.clear();
                         allOrderNumbers.remove(position);
-                        Log.d("AllOrderNumbers", String.valueOf(allOrderNumbers));
-                        pizzaAdaptor.notifyDataSetChanged();
                         ArrayAdapter<String> orderNumbersAdapter = (ArrayAdapter<String>) orderNumber.getAdapter();
                         orderNumbersAdapter.clear();
                         orderNumbersAdapter.addAll(allOrderNumbers);
                         orderNumbersAdapter.notifyDataSetChanged();
+                        ArrayList<String> allPizzas = StoreOrders.getInstance().getStore_orders().get(0).toStringArray();
+                        pizzaAdaptor.clear();
+                        pizzaAdaptor.addAll(allPizzas);
+                        pizzaAdaptor.notifyDataSetChanged();
                         if (!allOrderNumbers.isEmpty()) {
                             orderNumber.setSelection(0);
                         }
@@ -111,7 +112,6 @@ public class StoreOrdersActivity extends AppCompatActivity implements OnItemSele
         ArrayAdapter<String> pizzaAdaptor = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, allPizzas);
         pizzaOrder.setAdapter(pizzaAdaptor);
         updatePrices(allOrders.get(position));
-
         deleteOrder = findViewById(R.id.deleteOrder);
         deleteOrder.setOnClickListener(new View.OnClickListener() {
             @Override
