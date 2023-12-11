@@ -38,19 +38,19 @@
             android:id="@+id/byoSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="small" />
+            android:text="@string/small" />
 
         <RadioButton
             android:id="@+id/byoMed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="medium" />
+            android:text="@string/medium" />
 
         <RadioButton
             android:id="@+id/byoLarge"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="large" />
+            android:layout_height="48dp"
+            android:text="@string/large" />
     </RadioGroup>
 
     <RadioGroup
@@ -70,13 +70,13 @@
             android:id="@+id/byoAlfredo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="alfredo sauce" />
+            android:text="@string/alfredo_sauce" />
 
         <RadioButton
             android:id="@+id/byoTomato"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="tomato sauce" />
+            android:layout_height="48dp"
+            android:text="@string/tomato_sauce" />
     </RadioGroup>
 
     <TextView
@@ -144,7 +144,7 @@
         android:layout_marginTop="453dp"
         android:layout_marginEnd="133dp"
         android:layout_marginBottom="230dp"
-        android:text="extra cheese"
+        android:text="@string/extra_cheese"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,7 +158,7 @@
         android:layout_marginTop="509dp"
         android:layout_marginEnd="141dp"
         android:layout_marginBottom="174dp"
-        android:text="extra sauce"
+        android:text="@string/extra_sauce"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +172,7 @@
         android:layout_marginTop="356dp"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="356dp"
-        android:text="price:"
+        android:text="@string/price"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -191,5 +191,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/byo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_topping"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_topping"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

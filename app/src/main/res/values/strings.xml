@@ -15,4 +15,16 @@
     <string name="delete_instructions">If you want to delete an order, please click on it in the above list.</string>
     <string name="add_to_order">Add to Order</string>
     <string name="order_number">Order Number:</string>
+    <string name="order_total">Order Total:</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="extra_cheese">Extra Cheese</string>
+    <string name="extra_sauce">Extra Sauce</string>
+    <string name="price">Price:</string>
+    <string name="alfredo_sauce">Alfredo Sauce</string>
+    <string name="tomato_sauce">Tomato Sauce</string>
+    <string name="add_topping">Click to add a topping.</string>
+    <string name="delete_topping">Click to delete a topping.</string>
+    <string name="click_type">Click to select specialty pizza type.</string>
 </resources>

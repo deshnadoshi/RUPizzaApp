@@ -211,11 +211,11 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
 
         if (selectedSize != null){
             String sizeName = selectedSize.getText().toString();
-            if (sizeName.equals("small")){
+            if (sizeName.equals("Small")){
                 return Size.SMALL;
-            } else if (sizeName.equals("medium")){
+            } else if (sizeName.equals("Medium")){
                 return Size.MEDIUM;
-            } else if (sizeName.equals("large")){
+            } else if (sizeName.equals("Large")){
                 return Size.LARGE;
             }
         }

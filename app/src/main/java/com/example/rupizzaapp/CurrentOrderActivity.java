@@ -28,12 +28,9 @@ public class CurrentOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currentorder);
-
         pizzas = findViewById(R.id.pizzas);
-
         Order currentOrder = Order.getInstance();
         ArrayList<String> allPizzas = currentOrder.toStringArray();
-
         ArrayAdapter<String> pizzaAdaptor = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, allPizzas);
         pizzas.setAdapter(pizzaAdaptor);
         updatePrices();
@@ -58,6 +55,8 @@ public class CurrentOrderActivity extends AppCompatActivity {
                     updatePrices();
                     allPizzas.clear();
                     pizzaAdaptor.notifyDataSetChanged();
+                } else {
+                    showToast("You must add at least one pizza to your order.");
                 }
             }
         });
@@ -106,22 +105,6 @@ public class CurrentOrderActivity extends AppCompatActivity {
         total.setText("Total: " + String.format("%.2f", priceTotal));
     }
 
-    private void addToOrder() {
-        placeOrder = findViewById(R.id.placeOrder);
-        placeOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Order currentOrder = Order.getInstance();
-                if (currentOrder.getAllOrders().size() > 0) {
-                    StoreOrders currentStoreOrder = StoreOrders.getInstance();
-                    currentStoreOrder.addOrder(currentOrder);
-                    currentOrder.deleteOrder();
-                    showToast("Order has been placed.");
-                    updatePrices();
-                }
-            }
-        });
-    }
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }

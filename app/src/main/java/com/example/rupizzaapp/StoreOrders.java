@@ -75,6 +75,18 @@ public class StoreOrders {
     }
 
     /**
+     * Creates an ArrayList with all of the store's order numbers.
+     * @return ArrayList of order numbers in String.
+     */
+    public ArrayList<String> getOrderNumbers() {
+        ArrayList<String> orderNumbers = new ArrayList<>();
+        for (int i = 0; i < store_orders.size(); i++) {
+            orderNumbers.add(store_orders.get(i).getOrderNumber());
+        }
+        return orderNumbers;
+    }
+
+    /**
      * Exports all of the orders to a text file.
      * @param all_orders The ArrayList of all of the orders.
      * @param file The file where the data will be stored.
