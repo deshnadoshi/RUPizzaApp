@@ -48,7 +48,6 @@ public class StoreOrdersActivity extends AppCompatActivity implements OnItemSele
         ArrayAdapter<String> orderNumbersAdaptor = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, allOrderNumbers);
         orderNumbersAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         orderNumber.setAdapter(orderNumbersAdaptor);
-        Log.d("AllOrderNumbers", String.valueOf(allOrderNumbers));
     }
 
     /**
