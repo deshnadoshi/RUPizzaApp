@@ -73,10 +73,14 @@ public class StoreOrdersActivity extends AppCompatActivity implements OnItemSele
                         orderNumbersAdapter.clear();
                         orderNumbersAdapter.addAll(allOrderNumbers);
                         orderNumbersAdapter.notifyDataSetChanged();
-                        ArrayList<String> allPizzas = StoreOrders.getInstance().getStore_orders().get(0).toStringArray();
-                        pizzaAdaptor.clear();
-                        pizzaAdaptor.addAll(allPizzas);
-                        pizzaAdaptor.notifyDataSetChanged();
+                        if (StoreOrders.getInstance().getStore_orders().size() > 0) {
+                            ArrayList<String> allPizzas = StoreOrders.getInstance().getStore_orders().get(0).toStringArray();
+                            pizzaAdaptor.clear();
+                            pizzaAdaptor.addAll(allPizzas);
+                            pizzaAdaptor.notifyDataSetChanged();
+                        } else {
+                            pizzaAdaptor.clear();
+                        }
                         if (!allOrderNumbers.isEmpty()) {
                             orderNumber.setSelection(0);
                         }
