@@ -103,22 +103,6 @@ public class CurrentOrderActivity extends AppCompatActivity {
         total.setText("Total: " + String.format("%.2f", priceTotal));
     }
 
-    private void addToOrder() {
-        placeOrder = findViewById(R.id.placeOrder);
-        placeOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Order currentOrder = Order.getInstance();
-                if (currentOrder.getAllOrders().size() > 0) {
-                    StoreOrders currentStoreOrder = StoreOrders.getInstance();
-                    currentStoreOrder.addOrder(currentOrder);
-                    currentOrder.deleteOrder();
-                    showToast("Order has been placed.");
-                    updatePrices();
-                }
-            }
-        });
-    }
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
