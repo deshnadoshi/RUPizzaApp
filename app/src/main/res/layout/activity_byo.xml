@@ -216,4 +216,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.144" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="240dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="562dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="116dp"
+        android:text="@string/byo_directions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

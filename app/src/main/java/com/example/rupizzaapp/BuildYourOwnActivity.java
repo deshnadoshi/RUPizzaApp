@@ -160,7 +160,7 @@ public class BuildYourOwnActivity extends AppCompatActivity {
      */
     @SuppressLint("DefaultLocale")
     private void calculatePrice(){
-        double pizzaPrice = 0.0;
+        double pizzaPrice = 0.00;
         byoSize = findViewById(R.id.byoSize);
         byoSauce = findViewById(R.id.byoSauce);
         byoExtraCheese = findViewById(R.id.byoExtraCheese);
@@ -195,10 +195,11 @@ public class BuildYourOwnActivity extends AppCompatActivity {
             new_order.setExtraSauce(false);
         }
         if (new_order != null){
-            new_order.setPrice(pizzaPrice);
+            double pizza_total = Math.round(pizzaPrice * 100.0) / 100.0;
+            new_order.setPrice(pizza_total);
         }
         byoPrice = findViewById(R.id.byoPrice);
-        byoPrice.setText(String.format("%.2f", pizzaPrice));
+        byoPrice.setText("" + String.format("%.2f", pizzaPrice));
     }
 
     /**
